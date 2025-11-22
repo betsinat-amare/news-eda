@@ -17,5 +17,5 @@ venv/
 .DS_Store
 
 # Data
-data/
-*.sqlite
+# data/
+# *.sqlite
