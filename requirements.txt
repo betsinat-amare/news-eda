@@ -1,0 +1,13 @@
+pandas>=1.5
+numpy>=1.24
+matplotlib>=3.7
+scikit-learn>=1.2
+jupyterlab
+nltk
+spacy>=3.5
+gensim
+pytest
+pytest-cov
+black
+flake8
+python-dotenv
