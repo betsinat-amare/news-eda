@@ -10,19 +10,11 @@ nltk.download("stopwords", quiet=True)
 STOPWORDS = set(stopwords.words("english"))
 
 
-def clean_text(text: str) -> str:
-    """
-    Clean and normalize text for NLP analysis.
-
-    Steps:
-    - Lowercase
-    - Remove non-alphanumeric characters
-    - Remove stopwords
-    """
-    text = str(text).lower()
-    text = re.sub(r"[^a-zA-Z0-9\s]", " ", text)
-    tokens = [t for t in text.split() if t not in STOPWORDS and len(t) > 2]
-    return " ".join(tokens)
+def clean_text(text):
+    text = text.lower()
+    text = re.sub(r"[^a-zA-Z\s]", "", text)  # remove numbers + punctuation
+    text = re.sub(r"\s+", " ", text).strip()
+    return text
 
 
 def get_top_keywords(corpus, top_n=20):
