@@ -16,6 +16,5 @@ venv/
 # macOS
 .DS_Store
 
-# Data
-# data/
-# *.sqlite
+data/
+*.csv
